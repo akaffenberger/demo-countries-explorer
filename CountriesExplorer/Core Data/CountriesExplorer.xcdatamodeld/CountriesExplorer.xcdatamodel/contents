@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22757" systemVersion="23B81" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BookmarkEntity" representedClassName=".BookmarkEntity" syncable="YES" codeGenerationType="category">
+        <attribute name="id" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="CarEntity" representedClassName=".CarEntity" syncable="YES" codeGenerationType="category">
+        <attribute name="side" optional="YES" attributeType="String"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CountryEntity" inverseName="carObject" inverseEntity="CountryEntity"/>
+    </entity>
+    <entity name="CoatOfArmsEntity" representedClassName=".CoatOfArmsEntity" parentEntity="ImageEntity" syncable="YES" codeGenerationType="category">
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CountryEntity" inverseName="coatOfArmsImage" inverseEntity="CountryEntity"/>
+    </entity>
+    <entity name="CountryEntity" representedClassName=".CountryEntity" syncable="YES" codeGenerationType="category">
+        <attribute name="area" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="capitalCoordinateObject" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="capitalObject" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="commonName" optional="YES" attributeType="String"/>
+        <attribute name="countryCoordinateObject" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="languagesObject" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <attribute name="officialName" optional="YES" attributeType="String"/>
+        <attribute name="population" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="region" optional="YES" attributeType="String"/>
+        <attribute name="subregion" optional="YES" attributeType="String"/>
+        <attribute name="timezonesObject" optional="YES" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData"/>
+        <relationship name="carObject" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CarEntity" inverseName="country" inverseEntity="CarEntity"/>
+        <relationship name="coatOfArmsImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CoatOfArmsEntity" inverseName="country" inverseEntity="CoatOfArmsEntity"/>
+        <relationship name="currenciesSet" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CurrencyEntity" inverseName="country" inverseEntity="CurrencyEntity"/>
+        <relationship name="flagsImage" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="FlagsEntity" inverseName="country" inverseEntity="FlagsEntity"/>
+    </entity>
+    <entity name="CurrencyEntity" representedClassName=".CurrencyEntity" syncable="YES" codeGenerationType="category">
+        <attribute name="abbreviation" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="symbol" optional="YES" attributeType="String"/>
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CountryEntity" inverseName="currenciesSet" inverseEntity="CountryEntity"/>
+    </entity>
+    <entity name="FlagsEntity" representedClassName=".FlagsEntity" parentEntity="ImageEntity" syncable="YES" codeGenerationType="category">
+        <relationship name="country" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CountryEntity" inverseName="flagsImage" inverseEntity="CountryEntity"/>
+    </entity>
+    <entity name="ImageEntity" representedClassName=".ImageEntity" isAbstract="YES" syncable="YES" codeGenerationType="category">
+        <attribute name="pngPath" optional="YES" attributeType="String"/>
+    </entity>
+</model>

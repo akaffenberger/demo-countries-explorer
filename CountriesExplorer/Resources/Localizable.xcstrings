@@ -1,0 +1,36 @@
+{
+  "sourceLanguage" : "en",
+  "strings" : {
+    "%lld" : {
+
+    },
+    "• " : {
+
+    },
+    "Countries" : {
+
+    },
+    "LEFT" : {
+
+    },
+    "Maps" : {
+
+    },
+    "Overview" : {
+
+    },
+    "RIGHT" : {
+
+    },
+    "Running tests" : {
+
+    },
+    "Saved" : {
+
+    },
+    "Search" : {
+
+    }
+  },
+  "version" : "1.0"
+}
