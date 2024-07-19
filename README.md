@@ -2,7 +2,7 @@
 
 Open-book challenge with a 15-hour time limit to write a small, focused native mobile app that provides a type-ahead search using the public [restcountries](https://restcountries.com/) API.
 
-<img src="./screenshots/1.png?raw=true" width="250">  <img src="./screenshots/2.png?raw=true" width="250">  <img src="./screenshots/3.png?raw=true" width="250">
+<img src="./screenshots/1.png" width="262">   <img src="./screenshots/2.png" width="262">   <img src="./screenshots/3.png" width="262">
 
 ## Goals
 
