@@ -25,7 +25,7 @@ struct CountryMaps: View {
             .padding(.top)
         }
         .task {
-            locationService.start()
+            await locationService.start()
         }
     }
 }
