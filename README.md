@@ -44,6 +44,6 @@ These are the features that I deprioritized for the sake of completing the chall
 - Cache images for improved memory usage
 - Replace "magic numbers" in SwiftUI views with a style guide to support customization for landscape and different device sizes
 - Localize with at least one other language
-- Create a custom search bar in SwiftUI (rather than traversing the view hierarchy to find UINavigationView's search bar and modifying it)
+- Create a custom search bar in SwiftUI (rather than traversing the view hierarchy to find UINavigationView's search bar)
 
 
